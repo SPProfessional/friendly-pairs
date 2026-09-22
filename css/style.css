@@ -95,3 +95,64 @@ section p {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Game Controls */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: bold;
+    color: #3f5f68;
+}
+
+.controls select {
+    min-width: 180px;
+    padding: 12px 14px;
+    background-color: #f4f1e8;
+    color: #263238;
+    border: 2px solid #b8c9c0;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Select hover state */
+.controls select:hover {
+    border-color: #6f9fb5;
+}
+
+/* Select keyboard focus state */
+.controls select:focus {
+    outline: 3px solid #d6aa62;
+    outline-offset: 2px;
+    border-color: #6f9fb5;
+}
+
+/* Move counter */
+#game > p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#game > p span {
+    display: inline-block;
+    min-width: 30px;
+    color: #3f5f68;
+}
+
+/* Game message */
+#message {
+    min-height: 28px;
+    color: #52666d;
+    font-weight: bold;
+}
