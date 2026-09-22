@@ -156,3 +156,28 @@ section p {
     color: #52666d;
     font-weight: bold;
 }
+
+/* Game Board and Cards */
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 650px;
+    margin: 30px auto 10px;
+}
+
+/* Individual game cards */
+.card {
+    min-height: 110px;
+    padding: 15px;
+    background-color: #d9e4df;
+    color: #3f5f68;
+    border: 3px solid #b8c9c0;
+    border-radius: 14px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
