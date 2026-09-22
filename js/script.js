@@ -29,6 +29,20 @@ const themes = {
     colours: ["🔴", "🔵", "🟢", "🟡", "🟣", "🟠", "⚫", "⚪"]
 };
 
+/* Theme Settings */
+
+const themeSettings = {
+    animals: {
+        name: "Animals"
+    },
+    numbers: {
+        name: "Numbers"
+    },
+    colours: {
+        name: "Colours"
+    }
+};
+
 /* Difficulty Settings */
 
 const difficultySettings = {
@@ -159,6 +173,8 @@ function createCards() {
 
     const selectedTheme = themes[currentTheme];
 
+    const selectedThemeSettings = themeSettings[currentTheme];
+
     const numberOfPairs = difficultySettings[currentDifficulty].pairs;
 
     const selectedValues = selectedTheme.slice(0, numberOfPairs);
@@ -205,8 +221,7 @@ startButton.addEventListener("click", function () {
 
     movesDisplay.textContent = moves;
 
-    message.textContent = "Game ready! Find the matching pairs.";
-
-    createCards();
+    message.textContent =
+    `${selectedThemeSettings.name} game ready! Find the matching pairs.`;
 
 });
