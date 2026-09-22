@@ -96,37 +96,35 @@ function flipCard(card) {
         `Revealed card: ${card.dataset.value}`
     );
 
- if (!firstCard) {
+    if (!firstCard) {
+        firstCard = card;
+    } else {
+        secondCard = card;
+        lockedBoard = true;
 
-    firstCard = card;
+        moves++;
+        movesDisplay.textContent = moves;
 
-} else {
-
-    secondCard = card;
-    lockedBoard = true;
-
-    moves++;
-    movesDisplay.textContent = moves;
-
-    checkMatch();
+        checkMatch();
+    }
 }
 
 /* Check for Pair Match */
 
 function checkMatch() {
 
-if (firstCard.dataset.value === secondCard.dataset.value) {
+    if (firstCard.dataset.value === secondCard.dataset.value) {
 
-    firstCard.classList.add("matched");
-    secondCard.classList.add("matched");
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
 
-    message.textContent = "Great match!";
+        message.textContent = "Great match!";
 
-    firstCard = null;
-    secondCard = null;
-    lockedBoard = false;
+        firstCard = null;
+        secondCard = null;
+        lockedBoard = false;
 
-    checkGameComplete();
+        checkGameComplete();
 
     } else {
 
@@ -172,11 +170,7 @@ function createCards() {
     board.innerHTML = "";
 
     const selectedTheme = themes[currentTheme];
-
-    const selectedThemeSettings = themeSettings[currentTheme];
-
     const numberOfPairs = difficultySettings[currentDifficulty].pairs;
-
     const selectedValues = selectedTheme.slice(0, numberOfPairs);
 
     const cardValues = [
@@ -191,15 +185,13 @@ function createCards() {
         const card = document.createElement("button");
 
         card.classList.add("card");
-
         card.textContent = "?";
-
         card.dataset.value = value;
 
         card.setAttribute(
             "aria-label",
             "Hidden card. Press to reveal."
-);
+        );
 
         card.addEventListener("click", function () {
             flipCard(card);
@@ -224,7 +216,9 @@ startButton.addEventListener("click", function () {
 
     movesDisplay.textContent = moves;
 
+    const selectedThemeSettings = themeSettings[currentTheme];
     message.textContent =
-    `${selectedThemeSettings.name} game ready! Find the matching pairs.`;
+        `${selectedThemeSettings.name} game ready! Find the matching pairs.`;
 
-})
+    createCards();
+});
