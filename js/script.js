@@ -95,6 +95,26 @@ function checkMatch() {
         firstCard = null;
         secondCard = null;
         lockedBoard = false;
+
+    } else {
+
+        message.textContent = "Not a match. Try again!";
+
+        setTimeout(function () {
+
+            firstCard.textContent = "?";
+            secondCard.textContent = "?";
+
+            firstCard.setAttribute("aria-label", "Hidden game card");
+            secondCard.setAttribute("aria-label", "Hidden game card");
+
+            firstCard = null;
+            secondCard = null;
+            lockedBoard = false;
+
+            message.textContent = "Find another pair!";
+
+        }, 1000);
     }
 }
 
