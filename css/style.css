@@ -21,3 +21,50 @@ select,
 a {
     font-family: inherit;
 }
+
+/* ========================================
+   Header and Navigation
+   ======================================== */
+
+header {
+    background-color: #d9e4df;
+    padding: 25px 20px;
+    border-bottom: 4px solid #8eaa92;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+    color: #263238;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #263238;
+    background-color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Navigation hover state */
+nav a:hover {
+    background-color: #6f9fb5;
+    color: white;
+}
+
+/* Keyboard focus state */
+nav a:focus {
+    outline: 3px solid #d6aa62;
+    outline-offset: 3px;
+}
+
