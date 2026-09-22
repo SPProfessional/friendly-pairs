@@ -29,6 +29,20 @@ const themes = {
     colours: ["🔴", "🔵", "🟢", "🟡", "🟣", "🟠", "⚫", "⚪"]
 };
 
+/* Difficulty Settings */
+
+const difficultySettings = {
+    8: {
+        pairs: 4
+    },
+    12: {
+        pairs: 6
+    },
+    16: {
+        pairs: 8
+    }
+};
+
 
 /* Shuffle Cards */
 
@@ -145,7 +159,7 @@ function createCards() {
 
     const selectedTheme = themes[currentTheme];
 
-    const numberOfPairs = currentDifficulty / 2;
+    const numberOfPairs = difficultySettings[currentDifficulty].pairs;
 
     const selectedValues = selectedTheme.slice(0, numberOfPairs);
 
