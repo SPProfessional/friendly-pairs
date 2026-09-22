@@ -76,11 +76,29 @@ function flipCard(card) {
 
         secondCard = card;
         lockedBoard = true;
+
+        checkMatch();
     }
 }
 
+/* Check for Pair Match */
 
-/* Generate Cards*/
+function checkMatch() {
+
+    if (firstCard.dataset.value === secondCard.dataset.value) {
+
+        firstCard.classList.add("matched");
+        secondCard.classList.add("matched");
+
+        message.textContent = "Great match!";
+
+        firstCard = null;
+        secondCard = null;
+        lockedBoard = false;
+    }
+}
+
+/* Generate Cards */
 
 function createCards() {
 
