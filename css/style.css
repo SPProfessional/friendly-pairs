@@ -199,3 +199,79 @@ section p {
 .card {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+/* Responsive Mobile and Tablet Layout  */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #board {
+        gap: 10px;
+    }
+
+    .card {
+        min-height: 95px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .controls label {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .controls select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #board {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+    }
+
+    .card {
+        min-height: 85px;
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
