@@ -181,3 +181,21 @@ section p {
     box-sizing: border-box;
 }
 
+/* Card Interaction States */
+
+/* Card hover state */
+.card:hover {
+    background-color: #c8d9d2;
+    transform: translateY(-3px);
+}
+
+/* Card keyboard focus state */
+.card:focus {
+    outline: 3px solid #d6aa62;
+    outline-offset: 3px;
+}
+
+/* Keep the interaction smooth */
+.card {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
