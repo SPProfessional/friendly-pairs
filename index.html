@@ -50,18 +50,21 @@
             </label>
         </div>
 
-        <button id="start">Start Game</button>
+        <button id="start" type="button">Start Game</button>
 
         <p>
-          Moves:
-          <span id="moves">0</span>
-       </p>
+         Moves:
+        <span id="moves" aria-live="polite">0</span>
+        </p>
 
-        <p id="message">Choose your game settings</p>
+        <p id="message" aria-live="polite">Choose your game settings</p>
 
-        <div id="board">
+       <div
+           id="board"
+           role="group"
+           aria-label="Memory game cards">
+       </div>
 
-        </div>
     </section>
 
         <section id="instructions">

@@ -196,7 +196,10 @@ function createCards() {
 
         card.dataset.value = value;
 
-        card.setAttribute("aria-label", "Hidden game card");
+        card.setAttribute(
+            "aria-label",
+            "Hidden card. Press to reveal."
+);
 
         card.addEventListener("click", function () {
             flipCard(card);
@@ -224,4 +227,4 @@ startButton.addEventListener("click", function () {
     message.textContent =
     `${selectedThemeSettings.name} game ready! Find the matching pairs.`;
 
-});
+})
