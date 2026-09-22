@@ -87,16 +87,18 @@ function flipCard(card) {
 
 function checkMatch() {
 
-    if (firstCard.dataset.value === secondCard.dataset.value) {
+if (firstCard.dataset.value === secondCard.dataset.value) {
 
-        firstCard.classList.add("matched");
-        secondCard.classList.add("matched");
+    firstCard.classList.add("matched");
+    secondCard.classList.add("matched");
 
-        message.textContent = "Great match!";
+    message.textContent = "Great match!";
 
-        firstCard = null;
-        secondCard = null;
-        lockedBoard = false;
+    firstCard = null;
+    secondCard = null;
+    lockedBoard = false;
+
+    checkGameComplete();
 
     } else {
 
@@ -117,6 +119,21 @@ function checkMatch() {
             message.textContent = "Find another pair!";
 
         }, 1000);
+    }
+}
+
+/* Check for Game Completion */
+
+function checkGameComplete() {
+
+    const matchedCards = document.querySelectorAll(".card.matched");
+
+    if (matchedCards.length === currentDifficulty) {
+
+        message.textContent =
+            `Well done! You found all the pairs in ${moves} moves.`;
+
+        lockedBoard = true;
     }
 }
 
