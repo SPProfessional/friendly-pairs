@@ -15,8 +15,13 @@ let currentTheme = "animals";
 let currentDifficulty = 8;
 let moves = 0;
 
+// Track the cards currently being selected
+let firstCard = null;
+let secondCard = null;
+let lockedBoard = false;
 
-/* Game Theme Data */
+
+/* Game Theme */
 
 const themes = {
     animals: ["🐶", "🐱", "🦁", "🐸", "🐵", "🐼", "🐰", "🐨"],
@@ -41,7 +46,41 @@ function shuffleCards(cards) {
 }
 
 
-/* Generate Game Cards */
+/* Card Flipping */
+
+function flipCard(card) {
+
+    if (lockedBoard) {
+        return;
+    }
+
+    if (card === firstCard) {
+        return;
+    }
+
+    if (card.classList.contains("matched")) {
+        return;
+    }
+
+    card.textContent = card.dataset.value;
+    card.setAttribute(
+        "aria-label",
+        `Revealed card: ${card.dataset.value}`
+    );
+
+    if (!firstCard) {
+
+        firstCard = card;
+
+    } else {
+
+        secondCard = card;
+        lockedBoard = true;
+    }
+}
+
+
+/* Generate Cards*/
 
 function createCards() {
 
@@ -72,12 +111,16 @@ function createCards() {
 
         card.setAttribute("aria-label", "Hidden game card");
 
+        card.addEventListener("click", function () {
+            flipCard(card);
+        });
+
         board.appendChild(card);
     });
 }
 
 
-/* Start Game*/
+/* Start Game */
 
 startButton.addEventListener("click", function () {
 
@@ -85,6 +128,10 @@ startButton.addEventListener("click", function () {
     currentDifficulty = Number(difficultySelect.value);
 
     moves = 0;
+    firstCard = null;
+    secondCard = null;
+    lockedBoard = false;
+
     movesDisplay.textContent = moves;
 
     message.textContent = "Game ready! Find the matching pairs.";
