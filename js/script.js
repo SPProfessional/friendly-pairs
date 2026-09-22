@@ -16,13 +16,51 @@ let currentDifficulty = 8;
 let moves = 0;
 
 
+/* Game Theme Data */
+
+const themes = {
+    animals: ["🐶", "🐱", "🦁", "🐸", "🐵", "🐼", "🐰", "🐨"],
+    numbers: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    colours: ["🔴", "🔵", "🟢", "🟡", "🟣", "🟠", "⚫", "⚪"]
+};
+
+
+/* Shuffle Cards */
+
+function shuffleCards(cards) {
+
+    for (let i = cards.length - 1; i > 0; i--) {
+
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+
+        [cards[i], cards[randomIndex]] =
+            [cards[randomIndex], cards[i]];
+    }
+
+    return cards;
+}
+
+
 /* Generate Game Cards */
 
 function createCards() {
 
     board.innerHTML = "";
 
-    for (let i = 0; i < currentDifficulty; i++) {
+    const selectedTheme = themes[currentTheme];
+
+    const numberOfPairs = currentDifficulty / 2;
+
+    const selectedValues = selectedTheme.slice(0, numberOfPairs);
+
+    const cardValues = [
+        ...selectedValues,
+        ...selectedValues
+    ];
+
+    shuffleCards(cardValues);
+
+    cardValues.forEach(function (value) {
 
         const card = document.createElement("button");
 
@@ -30,14 +68,16 @@ function createCards() {
 
         card.textContent = "?";
 
+        card.dataset.value = value;
+
         card.setAttribute("aria-label", "Hidden game card");
 
         board.appendChild(card);
-    }
+    });
 }
 
 
-/* Start Game */
+/* Start Game*/
 
 startButton.addEventListener("click", function () {
 
