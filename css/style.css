@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 /* Keyboard focus state */
-nav a:focus {
+nav a:focus-visible {
     outline: 3px solid #d6aa62;
     outline-offset: 3px;
 }
@@ -94,7 +94,7 @@ section p {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-}
+}nav a
 
 /* Game Controls */
 
@@ -132,7 +132,7 @@ section p {
 }
 
 /* Select keyboard focus state */
-.controls select:focus {
+.controls select:focus-visible {
     outline: 3px solid #d6aa62;
     outline-offset: 2px;
     border-color: #6f9fb5;
@@ -190,7 +190,7 @@ section p {
 }
 
 /* Card keyboard focus state */
-.card:focus {
+.card:focus-visible {
     outline: 3px solid #d6aa62;
     outline-offset: 3px;
 }
@@ -273,5 +273,18 @@ section p {
 
     section {
         padding: 18px;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
     }
 }
