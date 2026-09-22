@@ -68,17 +68,19 @@ function flipCard(card) {
         `Revealed card: ${card.dataset.value}`
     );
 
-    if (!firstCard) {
+ if (!firstCard) {
 
-        firstCard = card;
+    firstCard = card;
 
-    } else {
+} else {
 
-        secondCard = card;
-        lockedBoard = true;
+    secondCard = card;
+    lockedBoard = true;
 
-        checkMatch();
-    }
+    moves++;
+    movesDisplay.textContent = moves;
+
+    checkMatch();
 }
 
 /* Check for Pair Match */
