@@ -15,7 +15,30 @@ let currentTheme = "animals";
 let currentDifficulty = 8;
 let moves = 0;
 
-// Game Start
+
+/* Generate Game Cards */
+
+function createCards() {
+
+    board.innerHTML = "";
+
+    for (let i = 0; i < currentDifficulty; i++) {
+
+        const card = document.createElement("button");
+
+        card.classList.add("card");
+
+        card.textContent = "?";
+
+        card.setAttribute("aria-label", "Hidden game card");
+
+        board.appendChild(card);
+    }
+}
+
+
+/* Start Game */
+
 startButton.addEventListener("click", function () {
 
     currentTheme = themeSelect.value;
@@ -26,6 +49,6 @@ startButton.addEventListener("click", function () {
 
     message.textContent = "Game ready! Find the matching pairs.";
 
-    board.innerHTML = "";
+    createCards();
 
 });
