@@ -126,6 +126,36 @@ section p {
     cursor: pointer;
 }
 
+/* Start Game button */
+#start {
+    padding: 12px 28px;
+    background-color: #6f9fb5;
+    color: #ffffff;
+    border: 2px solid #52666d;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Start Game hover state */
+#start:hover {
+    background-color: #3f5f68;
+    transform: translateY(-2px);
+}
+
+/* Start Game keyboard focus */
+#start:focus-visible {
+    outline: 3px solid #d6aa62;
+    outline-offset: 3px;
+}
+
+/* Start Game active state */
+#start:active {
+    transform: translateY(0);
+}
+
 /* Select hover state */
 .controls select:hover {
     border-color: #6f9fb5;
@@ -140,6 +170,7 @@ section p {
 
 /* Move counter */
 #game > p {
+    margin: 12px 0;
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -148,6 +179,13 @@ section p {
     display: inline-block;
     min-width: 30px;
     color: #3f5f68;
+}
+
+#message {
+    min-height: 28px;
+    margin: 10px auto 20px;
+    color: #52666d;
+    font-weight: bold;
 }
 
 /* Game message */
@@ -175,10 +213,11 @@ section p {
     color: #3f5f68;
     border: 3px solid #b8c9c0;
     border-radius: 14px;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     cursor: pointer;
     box-sizing: border-box;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 /* Card Interaction States */
@@ -189,10 +228,23 @@ section p {
     transform: translateY(-3px);
 }
 
-/* Card keyboard focus state */
+/* Keyboard focus state */
 .card:focus-visible {
     outline: 3px solid #d6aa62;
     outline-offset: 3px;
+}
+
+/* Matched card state */
+.card.matched {
+    background-color: #c8d9d2;
+    border-color: #8eaa92;
+    color: #3f5f68;
+    cursor: default;
+}
+
+/* Prevent matched cards from moving on hover */
+.card.matched:hover {
+    transform: none;
 }
 
 /* Keep the interaction smooth */
@@ -233,6 +285,11 @@ section p {
 
 /* Smaller mobile screens */
 @media (max-width: 480px) {
+
+    #start {
+    width: 100%;
+    max-width: 280px;
+    }
 
     header h1 {
         font-size: 1.8rem;
