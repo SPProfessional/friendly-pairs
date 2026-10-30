@@ -8,6 +8,77 @@ Testing was carried out using the local development preview and will be repeated
 
 ---
 
+## Manual and Automated Testing
+
+Testing can be divided into two main approaches;
+
+Manual testing and automated testing. Both approaches help identify problems and improve the reliability, usability and quality of a web application.
+
+### Manual Testing
+
+Manual testing involves a person interacting directly with an application and checking whether its features behave as expected.
+
+For Friendly Pairs, manual testing was used to:
+- Start and restart games using different themes and difficulty settings.
+- Check that cards reveal correctly and matching pairs are recognised.
+- Confirm that incorrect pairs are hidden again.
+- Check that the move counter and completion messages update correctly.
+- Navigate the application using a keyboard.
+- Check visible focus indicators and accessibility features.
+- Inspect the layout at desktop, tablet and mobile screen sizes.
+- Check that the application is understandable and straightforward to use.
+
+**Advantages of manual testing:**
+- Allows a person to assess usability and the overall user experience.
+- Helps identify visual and layout problems that automated tools may not recognise.
+- Supports exploratory testing, where a tester can try different interactions and identify unexpected behaviour.
+- Allows accessibility and ease of use to be considered from a real user's perspective.
+
+**Disadvantages of manual testing:**
+- Can take longer than automated testing, particularly when tests need to be repeated.
+- Results can vary depending on the person carrying out the testing.
+- Repeated checks can be time-consuming.
+- Human error may result in an issue being overlooked.
+
+Manual testing is particularly useful when assessing interactive features, accessibility, visual presentation and usability.
+
+### Automated Testing
+
+Automated testing uses software tools or scripts to carry out predefined checks and report potential errors or problems.
+
+For Friendly Pairs, automated validation tools were used to check the quality of the code:
+- The W3C HTML Validator checked the HTML document for markup errors.
+- The W3C CSS Validator checked the stylesheet for CSS errors.
+- JSHint checked the JavaScript code for potential issues, using an ES6 configuration to support the JavaScript syntax used in the project.
+
+**Advantages of automated testing:**
+- Checks can be repeated quickly and consistently.
+- Helps identify syntax errors and potential code-quality problems.
+- Reduces the amount of repetitive manual checking required.
+- Is useful when making changes, as checks can be run again to identify potential regressions.
+
+**Disadvantages of automated testing:**
+- Tools can only identify issues within the checks they are designed to perform.
+- They cannot fully judge whether an application is easy or enjoyable to use.
+- Some tools require configuration to recognise the technologies and syntax used.
+- More advanced automated testing can require additional setup and maintenance.
+
+Automated testing is particularly useful for repeatable technical checks, code validation and larger projects where frequent changes need to be tested consistently.
+
+### Why Both Approaches Were Used
+
+A combination of manual and automated testing was selected for Friendly Pairs because the project relies on both functional interaction and a clear, accessible user experience.
+
+Manual testing was important for checking the actual gameplay, including card selection, matching, difficulty settings, game completion, keyboard navigation and responsive behaviour. These features require interaction and observation to determine whether they work correctly and provide a suitable experience for the intended audience.
+
+Automated validation complemented this process by checking the underlying HTML, CSS and JavaScript. The W3C validators and JSHint helped identify technical issues that might not be obvious during normal gameplay.
+
+A dedicated automated gameplay testing framework was not introduced because of the relatively small scale of the application. For this project, manual functional and usability testing, supported by automated code validation, provided an appropriate balance.
+
+Neither approach replaces the other. Automated checks help identify technical problems consistently, while manual testing helps establish whether the finished application works well for its users.
+
+---
+
 ## Functional Testing
 
 | Test               | Expected Result                                 | Result |
