@@ -110,6 +110,8 @@ Detailed testing information can be found in:
 
 `docs/testing.md`
 
+HTML and CSS validation was completed using the W3C validators, with both reporting zero errors. JavaScript was checked using JSHint configured for ECMAScript 6 (ES6), with no warnings reported. Screenshots of the validation results and further testing information are available in the [testing documentation](docs/testing.md).
+
 ## Version Control
 
 Git and GitHub were used throughout development.
