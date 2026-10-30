@@ -90,3 +90,34 @@ The issue was retested after the correction and the difficulty system worked as 
 ## Final Testing
 
 Final testing will be completed against the deployed GitHub Pages version before submission to confirm that the deployed project behaves the same as the local development version.
+
+## Code Validation
+
+The HTML, CSS and JavaScript files were checked using appropriate validation tools to identify errors and potential issues.
+
+HTML Validation
+
+![HTML Validation](screenshots/html-validation.png)
+
+The HTML document was checked using the W3C HTML Validator.
+
+Result: Passed with zero errors.
+
+
+CSS Validation
+
+![CSS Validation](screenshots/css-validation.png)
+
+The stylesheet was checked using the W3C CSS Validator.
+
+Result: Passed with zero errors.
+
+
+
+JavaScript Validation
+
+![JavaScript JSHint Results](screenshots/javascript-jshint.png)
+
+The JavaScript file was checked using JSHint. The configuration was set to ECMAScript 6 (ES6) to recognise the modern JavaScript syntax used throughout the application.
+
+Result: No warnings reported after configuring the correct JavaScript version.
