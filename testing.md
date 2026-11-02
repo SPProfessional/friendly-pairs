@@ -184,7 +184,6 @@ The stylesheet was checked using the W3C CSS Validator.
 Result: Passed with zero errors.
 
 
-
 JavaScript Validation
 
 ![JavaScript JSHint Results](screenshots/javascript-jshint.png)
@@ -192,3 +191,85 @@ JavaScript Validation
 The JavaScript file was checked using JSHint. The configuration was set to ECMAScript 6 (ES6) to recognise the modern JavaScript syntax used throughout the application.
 
 Result: No warnings reported after configuring the correct JavaScript version.
+
+
+## User Story Evidence
+
+The following evidence demonstrates how the completed Friendly Pairs application meets its user stories. Each section explains the user requirement, identifies the relevant functionality and provides a screenshot of the finished application.
+
+The application is deployed and can be accessed here: [Friendly Pairs – Live Application](https://spprofessional.github.io/friendly-pairs/).
+
+### US1 – Clear Homepage and Navigation
+
+As a player, I want a clear homepage and navigation so that I can easily find the game and its instructions.
+
+The [Friendly Pairs homepage](https://spprofessional.github.io/friendly-pairs/) presents the game title, navigation links and game controls in a clear, structured layout. The navigation allows players to access the Play, How To Play and About sections.
+
+![Homepage and Navigation](screenshots/homepage-navigation.png)
+
+### US2 – Theme Selection
+
+As a player, I want to choose a theme so that I can play with content I enjoy.
+
+Players can select from three available themes: Animals, Numbers and Colours. The selected theme determines the content displayed on the game cards, providing variety and allowing players to choose content that interests them.
+
+The theme selection functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Theme Selection](screenshots/theme-selection.png)
+
+### US3 – Difficulty Selection
+
+As a player, I want to choose a difficulty so that I can select an appropriate challenge.
+
+The application provides three difficulty settings:
+- Easy – 8 cards (4 pairs).
+- Medium – 12 cards (6 pairs).
+- Hard – 16 cards (8 pairs).
+
+Changing the difficulty adjusts the number of cards generated for the game.
+
+This functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Difficulty Selection](screenshots/difficulty-selection.png)
+
+### US4 – Finding Matching Pairs
+
+As a player, I want to reveal cards and find matching pairs so that I can play the memory game.
+
+Players interact with the cards to reveal their contents. When two cards are selected, the application checks whether they match. Correct pairs remain revealed, while incorrect pairs are hidden again, allowing the player to continue.
+
+The matching functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Game in Progress](screenshots/game-in-progress.png)
+
+### US5 – Progress Feedback
+
+As a player, I want feedback and a move counter so that I can follow my progress and know when I have completed the game.
+
+The move counter updates as players make selections. The application also provides positive feedback when all matching pairs have been found, clearly indicating that the game has been completed.
+
+This functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Game in Progress](screenshots/game-in-progress.png)
+
+![Game Complete](screenshots/game-complete.png)
+
+### US6 – Keyboard Accessibility
+
+As a player who uses a keyboard, I want accessible controls and visible focus indicators so that I can navigate and interact with the game without relying on a mouse.
+
+Interactive elements can be accessed using keyboard navigation, with visible focus indicators helping players identify which element is currently selected.
+
+Keyboard accessibility can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Keyboard Focus](screenshots/keyboard-focus.png)
+
+### US7 – Responsive Mobile Layout
+
+As a mobile user, I want the game to adapt to my screen so that I can use it on different devices.
+
+The responsive layout adjusts the navigation, game controls and card grid to suit smaller screen sizes, helping maintain usability across desktop, tablet and mobile devices.
+
+The responsive design can be viewed in the [live application](https://spprofessional.github.io/friendly-pairs/).
+
+![Mobile Layout](screenshots/mobile-layout.png)
