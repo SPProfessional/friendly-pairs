@@ -36,6 +36,8 @@ The game does not use a countdown timer or time pressure. This allows players to
 
 The Colours theme uses colour emoji as the visual representations of the different colours.
 
+- [UX Design Process](docs/design.md) – Design principles, reconstructed wireframe and explanation of the final user experience.
+
 ## Accessibility
 
 Accessibility was considered throughout the design and development process.
