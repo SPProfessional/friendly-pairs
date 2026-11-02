@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found. Return to Friendly Pairs and enjoy the memory matching game.">
+    <title>Page Not Found | Friendly Pairs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .error-content {
+            max-width: 550px;
+            width: 100%;
+            padding: 3rem 2rem;
+            border-radius: 18px;
+        }
+
+        .error-number {
+            font-size: clamp(4rem, 12vw, 7rem);
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .error-content h1 {
+            margin: 1.5rem 0 1rem;
+        }
+
+        .error-content p {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .error-home {
+            display: inline-block;
+            padding: 0.85rem 1.6rem;
+            border-radius: 8px;
+            background: #356859;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .error-home:hover {
+            background: #264d42;
+        }
+
+        .error-home:focus-visible {
+            outline: 3px solid #d49b35;
+            outline-offset: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .error-home {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="error-page">
+        <section class="error-content">
+            <p class="error-number">404</p>
+
+            <h1>Oops! Page Not Found</h1>
+
+            <p>
+                It looks like this page is playing hide and seek!
+                Don't worry, your Friendly Pairs game is still here.
+                Head back to the homepage and try again.
+            </p>
+
+            <a class="error-home" href="./">
+                Return to Friendly Pairs
+            </a>
+        </section>
+    </main>
+
+</body>
+</html>
