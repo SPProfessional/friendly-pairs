@@ -2,7 +2,11 @@
 
 Friendly Pairs is a child-friendly memory matching game created using HTML, CSS and JavaScript.
 
-The project is designed with children, including SEND learners, in mind. It provides a simple and predictable game experience that encourages memory, recognition and concentration without time pressure.
+The project is designed with children, including SEND learners, in mind. It provides a simple and predictable game experience that encourages memory, visual recognition and concentration without time pressure.
+
+Players can choose from three themes and three difficulty levels, allowing them to enjoy the game at a level that suits their confidence and ability. Clear instructions, positive feedback and accessible controls help create an inclusive and enjoyable experience.
+
+The aim is to provide a fun, straightforward activity that supports learning through play while allowing users to progress at their own pace.
 
 ## Features
 
@@ -90,29 +94,27 @@ friendly-pairs/
 
 ## Testing
 
-Manual testing has been carried out during development to check the game's functionality, accessibility features and responsive layout.
+Manual testing has been carried out throughout development to check the game's functionality, accessibility features and responsive layout.
 
 Testing includes:
 
-* Game start and reset functionality
-* Difficulty levels
-* Theme selection
-* Card matching
-* Incorrect pair handling
-* Move counter
-* Game completion
-* Keyboard interaction
-* Focus indicators
-* Responsive layouts
-* Browser compatibility
+- Game start and reset functionality
+- Difficulty levels
+- Theme selection
+- Card matching
+- Incorrect pair handling
+- Move counter
+- Game completion
+- Keyboard interaction
+- Focus indicators
+- Responsive layouts
+- Browser compatibility
 
-Further final testing will be completed against the deployed version before submission.
+The application was also tested after deployment using GitHub Pages to confirm that the live version functions as expected.
 
-Detailed testing information can be found in:
+HTML and CSS validation was completed using the W3C validators, with both reporting zero errors. JavaScript was checked using JSHint configured for ECMAScript 6 (ES6), with no warnings reported.
 
-`docs/testing.md`
-
-HTML and CSS validation was completed using the W3C validators, with both reporting zero errors. JavaScript was checked using JSHint configured for ECMAScript 6 (ES6), with no warnings reported. Screenshots of the validation results and further testing information are available in the [testing documentation](docs/testing.md).
+Screenshots of the validation results, user story evidence and further testing information are available in the [testing documentation](docs/testing.md).
 
 ## Version Control
 
@@ -122,17 +124,21 @@ The project was developed using incremental commits to record changes to the HTM
 
 ## Deployment
 
-The project is intended to be deployed using GitHub Pages.
+The project is deployed using **GitHub Pages** and is publicly accessible at:
 
-The final deployed version will be tested to confirm that it operates correctly outside the local development environment.
+[https://spprofessional.github.io/friendly-pairs/](https://spprofessional.github.io/friendly-pairs/)
+
+GitHub Pages is configured to deploy the project from the `main` branch.
+
+The deployed application was tested outside the local development environment to confirm that the game loads and functions correctly. The custom 404 error page was also tested to ensure that users can return to the main application if they visit an invalid URL.
 
 ## Attribution
 
-The project code was written specifically for Friendly Pairs.
+The project code was written specifically for Friendly Pairs using HTML, CSS and vanilla JavaScript.
 
 No external JavaScript libraries or frameworks are required.
 
-The visual design and game functionality were developed as part of this project. Any external assets added in the future will be credited here and identified appropriately within the project.
+The visual design and game functionality were developed as part of this project. Any external assets used within the application are acknowledged and credited appropriately. Where no external assets are used, the visual elements are created using the project's own code and styling.
 
 ## Future Improvements
 
