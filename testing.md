@@ -205,7 +205,7 @@ As a player, I want a clear homepage and navigation so that I can easily find th
 
 The [Friendly Pairs homepage](https://spprofessional.github.io/friendly-pairs/) presents the game title, navigation links and game controls in a clear, structured layout. The navigation allows players to access the Play, How To Play and About sections.
 
-![Homepage and Navigation](screenshots/homepage-navigation.png)
+![Homepage and Navigation](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/homepage-navigation.png)
 
 ### US2 – Theme Selection
 
@@ -215,7 +215,7 @@ Players can select from three available themes: Animals, Numbers and Colours. Th
 
 The theme selection functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Theme Selection](screenshots/theme-selection.png)
+![Theme Selection](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/theme-selection.png)
 
 ### US3 – Difficulty Selection
 
@@ -230,7 +230,7 @@ Changing the difficulty adjusts the number of cards generated for the game.
 
 This functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Difficulty Selection](screenshots/difficulty-selection.png)
+![Difficulty Selection](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/difficulty-selection.png)
 
 ### US4 – Finding Matching Pairs
 
@@ -240,7 +240,7 @@ Players interact with the cards to reveal their contents. When two cards are sel
 
 The matching functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Game in Progress](screenshots/game-in-progress.png)
+![Game in Progress](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/game-in-progress.png)
 
 ### US5 – Progress Feedback
 
@@ -250,9 +250,9 @@ The move counter updates as players make selections. The application also provid
 
 This functionality can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Game in Progress](screenshots/game-in-progress.png)
+![Game in Progress](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/game-in-progress.png)
 
-![Game Complete](screenshots/game-complete.png)
+![Game Complete](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/game-complete.png)
 
 ### US6 – Keyboard Accessibility
 
@@ -262,7 +262,7 @@ Interactive elements can be accessed using keyboard navigation, with visible foc
 
 Keyboard accessibility can be tested in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Keyboard Focus](screenshots/keyboard-focus.png)
+![Keyboard Focus](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/keyboard-focus.png)
 
 ### US7 – Responsive Mobile Layout
 
@@ -272,4 +272,4 @@ The responsive layout adjusts the navigation, game controls and card grid to sui
 
 The responsive design can be viewed in the [live application](https://spprofessional.github.io/friendly-pairs/).
 
-![Mobile Layout](screenshots/mobile-layout.png)
+![Mobile Layout](https://raw.githubusercontent.com/SPProfessional/friendly-pairs/main/docs/screenshots/mobile-layout.png)
